@@ -20,6 +20,9 @@ export class BooksComponent implements OnInit {
     // alert("This is click Event!");
   }
 
+  handleInput(event:any){
+console.log(event.value);
+  }
   constructor() { }
 
   ngOnInit(): void {
