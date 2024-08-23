@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent implements OnInit {
+  bookName = 'Clean Code';
+  authorName = 'Robert C Martin'
 
   constructor() { }
 
