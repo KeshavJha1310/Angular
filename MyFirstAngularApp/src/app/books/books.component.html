@@ -21,8 +21,8 @@
    </ul>
 </div>
 <button (click)="isShowing = !isShowing">
-   <span *ngIf="isShowing">Hide books</span>
-   <span *ngIf="!isShowing">show books</span>
+   <ng-container *ngIf="isShowing">Hide books</ng-container>
+   <ng-container *ngIf="!isShowing">show books</ng-container>
 </button>
 <div *ngIf="isShowing">
 <h2>These are the Programming books!</h2>
