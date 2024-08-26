@@ -1,5 +1,8 @@
 <button (click)="handleClickEvent()" [disabled]='isDisable'>Show Books</button>
-<input type="text" (input)="handleInput($event)">
+<!-- <input type="text" (input)="handleInput($event)"> -->
+ <!-- doing two way binding with ngModel -->
+ <input type="text" [(ngModel)]="myName">
+<h4>this is the example of Two way binding :- {{myName}}</h4>
 <h2>These are the Programming books!</h2>
 <img src="{{clean_code_url}}" alt="{{bookName}}" width="100">
 <ul>
