@@ -13,7 +13,9 @@ export class BooksComponent implements OnInit {
   authorName2:string = 'David Thomas';
   clean_code_url2:string = 'https://m.media-amazon.com/images/I/71Nxk9VhSTL._SY522_.jpg';
   isDisable:boolean= false
-
+  showTypes:boolean = false
+  showButton:boolean = true
+  showHideButton:boolean = false
 
   handleClickEvent() {
     this.isDisable = true;
@@ -21,14 +23,30 @@ export class BooksComponent implements OnInit {
   }
 
   myName : string = ''
+  //No need of this function bcz of ggModel directive
   // handleInput(event:any){
   //   console.log(event.target.value)
   // this.myName = event.target.value;
   // }
+
+  showtypes(){
+    this.showTypes = true
+    this.showButton = false
+    this.showHideButton = true
+  }
+  hideTypes(){
+    this.showTypes = false
+    this.showButton = true
+    this.showHideButton = false
+  }
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  /*
+  Different Types of Directives :- 
+  1. Used with a template
+  */
 
 }

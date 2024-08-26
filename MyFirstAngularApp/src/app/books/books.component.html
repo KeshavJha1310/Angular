@@ -3,6 +3,24 @@
  <!-- doing two way binding with ngModel -->
  <input type="text" [(ngModel)]="myName">
 <h4>this is the example of Two way binding :- {{myName}}</h4>
+<button *ngIf="showButton" (click)="showtypes()">Types of Directives</button>
+<button *ngIf="showHideButton" (click)="hideTypes()">Hide</button>
+<div *ngIf="showTypes">
+   <ul>
+      <li>
+        <h1>Components</h1>
+        <p>Used with Templates</p>
+      </li>
+      <li>
+        <h1>Attribute Directives</h1>
+        <p>Changes the appearance and behavior of the Element, Components, and other Directives</p>
+      </li>
+      <li>
+        <h1>Structural Directives</h1>
+        <p>Dom Manipulation</p>
+      </li>
+   </ul>
+</div>
 <h2>These are the Programming books!</h2>
 <img src="{{clean_code_url}}" alt="{{bookName}}" width="100">
 <ul>
