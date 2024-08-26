@@ -12,15 +12,15 @@ export class BooksComponent implements OnInit {
   bookName2:string = 'Pragmatic Programmer';
   authorName2:string = 'David Thomas';
   clean_code_url2:string = 'https://m.media-amazon.com/images/I/71Nxk9VhSTL._SY522_.jpg';
-  isDisable:boolean= false
+  // isDisable:boolean= false
   showTypes:boolean = false
   showButton:boolean = true
   showHideButton:boolean = false
-
-  handleClickEvent() {
-    this.isDisable = true;
-    // alert("This is click Event!");
-  }
+  isShowing:boolean = true  
+  // handleClickEvent() {
+  //   this.isDisable = true;
+  //   // alert("This is click Event!");
+  // }
 
   myName : string = ''
   //No need of this function bcz of ggModel directive
