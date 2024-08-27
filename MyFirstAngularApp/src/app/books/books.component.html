@@ -28,7 +28,7 @@
 <h2>These are the Programming books!</h2>
    <ng-container *ngFor="let single_book of books; let i=index">
       <ul>
-         <app-book [book]="single_book"></app-book>
+         <app-book (bookEmitter)="addToCart($event)" [book]="single_book"></app-book>
       </ul>
 
 </ng-container>

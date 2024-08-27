@@ -63,6 +63,9 @@ books:Book[]= [
     this.showButton = true
     this.showHideButton = false
   }
+  addToCart($event: any){
+    console.log($event)
+  }
   constructor() { }
 
   ngOnInit(): void {
