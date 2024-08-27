@@ -9,5 +9,9 @@ ul{
     flex-wrap: wrap;
 }
 li{
-    list-style: none    ;
+    list-style: none;
+    text-overflow:ellipsis;
+    width: 30%;
+    align-items: center;
+    cursor: pointer;
 }

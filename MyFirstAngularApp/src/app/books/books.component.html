@@ -1,6 +1,6 @@
 <!-- <input type="text" (input)="handleInput($event)"> -->
  <!-- doing two way binding with ngModel -->
- <input type="text" [(ngModel)]="myName">
+ <!-- <input type="text" [(ngModel)]="myName">
 <h4>this is the example of Two way binding :- {{myName}}</h4>
 <button *ngIf="showButton" (click)="showtypes()">Types of Directives</button><br>
 <button *ngIf="showHideButton" (click)="hideTypes()">Hide</button>
@@ -23,19 +23,14 @@
 <button (click)="isShowing = !isShowing">
    <ng-container *ngIf="isShowing">Hide books</ng-container>
    <ng-container *ngIf="!isShowing">show books</ng-container>
-</button>
+</button> -->
 <div *ngIf="isShowing">
 <h2>These are the Programming books!</h2>
-<ul>
-   <ng-container *ngFor="let book of books; let i=index">
-<li>
-   <p class="srno">{{i+1}}</p><br>
-   <img [src]="book.clean_code_url" [alt]="book.bookName" width="100"><br>
-   <h3 class="bookName">Book Name :-  <span>{{book.bookName | titlecase}}</span></h3>
-   <h3 class="authorName">Author Name :-  <span>{{book.authorName | titlecase}}</span></h3>
-   <h3 class="currency">Amount :-  <span>{{book.amount | currency:'INR'}}</span></h3>
-</li>
+   <ng-container *ngFor="let single_book of books; let i=index">
+      <ul>
+         <app-book [book]="single_book"></app-book>
+      </ul>
+
 </ng-container>
-</ul>
 </div>
 

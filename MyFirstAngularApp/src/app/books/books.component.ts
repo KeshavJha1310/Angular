@@ -1,12 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Book } from '../interfaces/book_interface';
 
-interface Book{
-bookName :string;
-authorName:string;
-clean_code_url : string;
-amount:number;
-}
 
+ 
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
