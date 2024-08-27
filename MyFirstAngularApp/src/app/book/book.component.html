@@ -5,5 +5,5 @@
     <h3 class="bookName">Book Name :-  <span>{{book.bookName | titlecase}}</span></h3>
     <h3 class="authorName">Author Name :-  <span>{{book.authorName | titlecase}}</span></h3>
     <h3 class="currency">Amount :-  <span>{{book.amount | currency:'INR'}}</span></h3>
-    <button>Add to Cart</button>
+    <button (click)="addToCart()">Add to Cart</button>
  </li>

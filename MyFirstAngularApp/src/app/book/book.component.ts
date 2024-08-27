@@ -1,4 +1,4 @@
-import { Component, OnInit ,Input} from '@angular/core';
+import { Component, OnInit ,Input, Output , EventEmitter} from '@angular/core';
 import { Book } from '../interfaces/book_interface';
 
 @Component({
@@ -9,8 +9,10 @@ import { Book } from '../interfaces/book_interface';
 export class BookComponent implements OnInit {
 
   @Input() book:Book = {} as Book;
-  
-
+  @Output() bookEmitter = new EventEmitter<Book>();
+  addToCart(){
+   this.bookEmitter.emit(this.book);  
+  }
   constructor() { }
 
   ngOnInit(): void {
