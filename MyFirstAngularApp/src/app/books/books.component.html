@@ -29,11 +29,11 @@
 <ul>
    <ng-container *ngFor="let book of books; let i=index">
 <li>
-   {{i+1}}<br>
+   <p class="srno">{{i+1}}</p><br>
    <img [src]="book.clean_code_url" [alt]="book.bookName" width="100"><br>
-   <h3>Book Name :-  <span>{{book.bookName | titlecase}}</span></h3>
-   <h3>Author Name :-  <span>{{book.authorName | titlecase}}</span></h3>
-   <h3>Amount :-  <span>{{book.amount | currency:'INR'}}</span></h3>
+   <h3 class="bookName">Book Name :-  <span>{{book.bookName | titlecase}}</span></h3>
+   <h3 class="authorName">Author Name :-  <span>{{book.authorName | titlecase}}</span></h3>
+   <h3 class="currency">Amount :-  <span>{{book.amount | currency:'INR'}}</span></h3>
 </li>
 </ng-container>
 </ul>

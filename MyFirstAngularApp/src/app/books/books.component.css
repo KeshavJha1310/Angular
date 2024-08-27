@@ -4,3 +4,10 @@ span{
 img{
     margin-left: 1.5em;
 }
+ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+li{
+    list-style: none    ;
+}

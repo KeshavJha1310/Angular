@@ -26,7 +26,19 @@ books:Book[]= [
     authorName:'David Thomas',
     clean_code_url: 'https://m.media-amazon.com/images/I/71Nxk9VhSTL._SY522_.jpg',
     amount:800  
-  }
+  },
+  {
+    bookName:  'Art of Computer Programming',
+    authorName:'Donald E. Knuth',
+    clean_code_url: 'https://m.media-amazon.com/images/I/719SYGJejmL._SY522_.jpg',
+    amount:1000  
+  },
+  {
+    bookName:  'Algorithms and Complexity',
+    authorName:'Herbert S. Wilf',
+    clean_code_url: 'https://m.media-amazon.com/images/I/71n2Qd3RQOL._SY522_.jpg',
+    amount:1200  
+  },
 ]
   // isDisable:boolean= false
   showTypes:boolean = false
