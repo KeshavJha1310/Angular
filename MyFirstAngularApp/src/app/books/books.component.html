@@ -27,11 +27,15 @@
 <div *ngIf="isShowing">
 <h2>These are the Programming books!</h2>
 <ul>
-<li *ngFor="let book for books">
-   <img [src]="book.clean_code_url" alt="book.bookName" width="100">
-   Book Name :-  <h3>book.bookName</h3>
-   Author Name :-  <h3>book.authorName</h3>
+   <ng-container *ngFor="let book of books; let i=index">
+<li>
+   {{i+1}}<br>
+   <img [src]="book.clean_code_url" [alt]="book.bookName" width="100"><br>
+   <h3>Book Name :-  <span>{{book.bookName | titlecase}}</span></h3>
+   <h3>Author Name :-  <span>{{book.authorName | titlecase}}</span></h3>
+   <h3>Amount :-  <span>{{book.amount | currency:'INR'}}</span></h3>
 </li>
+</ng-container>
 </ul>
 </div>
 

@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-
 interface Book{
 bookName :string;
 authorName:string;
 clean_code_url : string;
+amount:number;
 }
 
 @Component({
@@ -12,17 +12,20 @@ clean_code_url : string;
   templateUrl: './books.component.html',
   styleUrls: ['./books.component.css']
 })
+
 export class BooksComponent implements OnInit {
 books:Book[]= [
   {
     bookName :'Clean Code',
     authorName : 'Robert C Martin',
-    clean_code_url : 'https://m.media-amazon.com/images/I/71T7aD3EOTL._SY522_.jpg'
+    clean_code_url : 'https://m.media-amazon.com/images/I/71T7aD3EOTL._SY522_.jpg',
+    amount:700
   },
   {
     bookName:  'Pragmatic Programmer',
     authorName:'David Thomas',
-    clean_code_url: 'https://m.media-amazon.com/images/I/71Nxk9VhSTL._SY522_.jpg'
+    clean_code_url: 'https://m.media-amazon.com/images/I/71Nxk9VhSTL._SY522_.jpg',
+    amount:800  
   }
 ]
   // isDisable:boolean= false
