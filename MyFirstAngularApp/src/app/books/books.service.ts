@@ -37,3 +37,9 @@ export class BooksService {
     ];
   }
 }
+
+// class Name {
+//   constructor(name:string){
+
+//   }
+// }
