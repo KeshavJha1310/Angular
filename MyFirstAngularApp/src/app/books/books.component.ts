@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Book } from '../interfaces/book_interface';
+import { Book } from '../interfaces/Book_interface';
 import { BooksService } from './books.service';
 
 
@@ -7,7 +7,8 @@ import { BooksService } from './books.service';
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
-  styleUrls: ['./books.component.css']
+  styleUrls: ['./books.component.css'],
+
 })
 
 export class BooksComponent implements OnInit {
