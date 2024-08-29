@@ -40,9 +40,10 @@ export class BooksComponent implements OnInit {
   //   this.showButton = true
   //   this.showHideButton = false
   // }
-  addToCart($event: any){
-    console.log($event)
-  }
+  
+  // addToCart($event: any){
+  //   console.log($event)
+  // }
 
 constructor(private booksService: BooksService) {
   // this.booksService = new BooksService('keshav');

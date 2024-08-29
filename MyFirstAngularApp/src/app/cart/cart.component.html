@@ -1,0 +1,8 @@
+<h1>cart works!</h1>
+<div *ngIf="getCart().length > 0">Total No. :- {{getCart().length}}
+    <div *ngFor="let cart_items of getCart()">
+        <p>{{cart_items.bookName}}</p>
+        <!-- <p class="currency">{{cart_items.amount | currency:'INR'}}</p> -->
+    </div>
+</div>
+<div *ngIf="getCart().length == 0">The Cart is Empty!</div>

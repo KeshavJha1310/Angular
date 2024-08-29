@@ -24,11 +24,11 @@
    <ng-container *ngIf="isShowing">Hide books</ng-container>
    <ng-container *ngIf="!isShowing">show books</ng-container>
 </button> -->
-<div *ngIf="isShowing">
 <h2>These are the Programming books!</h2>
-   <ng-container *ngFor="let single_book of books; let i=index">
-      <ul>
-         <app-book (bookEmitter)="addToCart($event)" [book]="single_book"></app-book>
+<div class="container" *ngIf="isShowing">
+   <ng-container  *ngFor="let single_book of books; let i=index">
+      <ul style="display: flex; flex-wrap: wrap;">
+         <app-book [book]="single_book"></app-book>
       </ul>
 
 </ng-container>
