@@ -1,9 +1,11 @@
 
-<li>
-    <img [src]="book.clean_code_url" [alt]="book.bookName" width="100"><br>
-    <h3 class="bookName">Book Name :-  <span>{{book.bookName | titlecase}}</span></h3>
-    <h3 class="authorName">Author Name :-  <span>{{book.authorName | titlecase}}</span></h3>
-    <h3 class="currency">Amount :-  <span>{{book.amount | currency:'INR'}}</span></h3>
-    <button *ngIf="!isincart" (click)="addToCart()">Add to Cart</button>
-    <button *ngIf="isincart" (click)="removeFromCart()">Remove from cart</button>
+<li  class="flex border rounded-xl h-60">
+    <img [src]="book.clean_code_url" [alt]="book.bookName" width="100"class="m-auto rounded-sm m-5 h-3/5 justify-center"><br>
+    <div class="m-auto p-5">
+    <h3 class="bookName text-lg">Book Name :-  <span>{{book.bookName | titlecase}}</span></h3>
+    <h3 class="authorName text-lg">Author Name :-  <span>{{book.authorName | titlecase}}</span></h3>
+    <h3 class="currency my-4">Amount :-  <span>{{book.amount | currency:'INR'}}</span></h3>
+    <button class="bg-yellow-400 rounded p-3" *ngIf="!isincart" (click)="addToCart()">Add to Cart</button>
+    <button class="bg-yellow-400 rounded p-3" *ngIf="isincart" (click)="removeFromCart()">Remove from cart</button>
+    </div>
  </li>

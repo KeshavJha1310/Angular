@@ -25,10 +25,10 @@
    <ng-container *ngIf="!isShowing">show books</ng-container>
 </button> -->
 <h2>These are the Programming books!</h2>
-<div class="container" *ngIf="isShowing">
-   <ng-container  *ngFor="let single_book of books; let i=index">
-      <ul style="display: flex; flex-wrap: wrap;">
-         <app-book [book]="single_book"></app-book>
+<div *ngIf="isShowing" class="flex flex-wrap justify-center ">
+   <ng-container   *ngFor="let single_book of books; let i=index">
+      <ul>
+         <app-book [book]="single_book" class="w-full h-full p-5 text-center "></app-book>
       </ul>
 
 </ng-container>
