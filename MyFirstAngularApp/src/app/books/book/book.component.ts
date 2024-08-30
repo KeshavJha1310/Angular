@@ -22,7 +22,7 @@ export class BookComponent implements OnInit {
   removeFromCart(){
     this.isincart = false
     this.cartService.remove(this.book)
-  
+  }
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
