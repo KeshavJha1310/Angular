@@ -3,6 +3,7 @@ import { registerForm } from 'src/app/interfaces/auth';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { trigger } from '@angular/animations';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from '../auth.service';
 
 
 @Component({
@@ -21,34 +22,14 @@ form : registerForm = {
 passwordMatched:boolean = true;
 isLoading:boolean = false;
 
-  constructor() { }
+  constructor(private authService:AuthService) { }
 
   ngOnInit(): void {
   }
 
   submit(){
 
-    if(this.isLoading) return;
-    this.isLoading = true;
-
-if(this.form.password != this.form.comform_pass){
-  this.passwordMatched = false
-  return;
-}
-
-const auth = getAuth();
-createUserWithEmailAndPassword(auth, this.form.email, this.form.password)
-  .then((userCredential) => {
-    console.log(userCredential)
-    // Signed up 
-    const user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  }).finally(()=>(this.isLoading = false))
+    this.authService.register(this.form)
     // console.log(this.form)
   }
 
