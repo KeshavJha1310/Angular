@@ -36,7 +36,15 @@
     <div class="my-5">
         <button type="submit" 
         [disabled]="myForm.form.invalid"
-        class="p-2 w-full bg-blue-700 text-white hover:bg-blue-900 rounded">Submit</button>
+        class="p-2 w-full bg-purple-700 text-white hover:bg-purple-900 rounded">
+        
+        <ng-container *ngIf="isLoading">
+            Loading...
+        </ng-container>
+        <ng-container *ngIf="!isLoading">
+        Submit
+    </ng-container>
+    </button>
     </div>
     </form>
 </div>

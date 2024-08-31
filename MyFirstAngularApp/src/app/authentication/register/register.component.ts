@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { registerForm } from 'src/app/interfaces/auth';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { trigger } from '@angular/animations';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @Component({
@@ -18,6 +19,7 @@ form : registerForm = {
 }
 
 passwordMatched:boolean = true;
+isLoading:boolean = false;
 
   constructor() { }
 
@@ -25,6 +27,9 @@ passwordMatched:boolean = true;
   }
 
   submit(){
+
+    if(this.isLoading) return;
+    this.isLoading = true;
 
 if(this.form.password != this.form.comform_pass){
   this.passwordMatched = false
@@ -43,7 +48,7 @@ createUserWithEmailAndPassword(auth, this.form.email, this.form.password)
     const errorCode = error.code;
     const errorMessage = error.message;
     // ..
-  });
+  }).finally(()=>(this.isLoading = false))
     // console.log(this.form)
   }
 
