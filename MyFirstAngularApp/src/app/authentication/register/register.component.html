@@ -1,20 +1,41 @@
 <div class="flex h-screen justify-center">
-    <form class="p-4 rounded-lg border m-auto w1/3"  action="">
+    <form class="p-4 rounded-lg border m-auto w1/3"  (ngSubmit)="submit()" #myForm="ngForm">
         <h1 class="text-center text-xl">Register</h1>
         <div class="my-5 w-full">
         <label for="email">Email</label>
-        <input type="email" id="email" class="p-2 rounded w-full border" placeholder="Email Adress">
+        <input type="email" id="email" class="p-2 rounded w-full border" 
+        placeholder="Email Adress"
+        name="email"
+        [(ngModel)]="form.email"
+        #user_email = 'ngModel'
+        required
+        >{{form.email}}
     </div>
+    <div *ngIf="user_email.invalid && (user_email.dirty||user_email.touched)" class="p-4 bg-red-300 text-red-800 rounded">Email must be Valid</div>
         <div class="my-5 w-full">
         <label for="password">Password</label>
-        <input type="password" id="password" class="p-2 rounded w-full border" placeholder="Password">
+        <input type="password" id="password" class="p-2 rounded w-full border"
+         placeholder="Password"
+         name="password"
+         [(ngModel)]="form.password"
+         #user_pass="ngModel"
+         required
+         >{{form.password}}
     </div>
+    <div *ngIf="user_pass.invalid && (user_pass.dirty||user_pass.touched)" class="p-4 bg-red-300 text-red-800 rounded">Password must be Valid</div>
         <div class="my-5 w-full">
         <label for="password"> Confirm Password</label>
-        <input type="password" id="password" class="p-2 rounded w-full border" placeholder="Confirm Password">
+        <input type="password" id="password" class="p-2 rounded w-full border" placeholder="Confirm Password"
+        name="Confirm_pass"
+        [(ngModel)]="form.comform_pass"
+        #user_confirm_pass = 'ngModel'
+        required
+        >{{form.comform_pass}}
     </div>
+    <div *ngIf="user_confirm_pass.invalid && (user_confirm_pass.dirty||user_confirm_pass.touched)"class="p-4 bg-red-300 text-red-800 rounded">Confirm Password must be Valid</div>
     <div class="my-5">
         <button type="submit" 
+        [disabled]="myForm.form.invalid"
         class="p-2 w-full bg-blue-700 text-white hover:bg-blue-900 rounded">Submit</button>
     </div>
     </form>
